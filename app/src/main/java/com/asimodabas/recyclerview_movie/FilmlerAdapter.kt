@@ -42,7 +42,7 @@ class FilmlerAdapter(private val mContext: Context, private val FilmlerListesi: 
         holder.imageViewResim.setImageResource(
             mContext.resources.getIdentifier(film.film_resim_ad,"drawable",mContext.packageName))
         holder.buttonSepeteEkle.setOnClickListener {
-            Toast.makeText(mContext,"${film.film_ad}Sepete Eklendi",Toast.LENGTH_SHORT).show()
+            Toast.makeText(mContext,"${film.film_ad} Sepete Eklendi",Toast.LENGTH_SHORT).show()
         }
     }
 
