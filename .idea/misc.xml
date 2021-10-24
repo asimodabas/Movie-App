@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/WindoWss/AndroidStudioProjects/RecyclerView-Movie/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WindoWss/AndroidStudioProjects/RecyclerView-Movie/app/src/main/res/layout/card_film_tasarim.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WindoWss/AndroidStudioProjects/RecyclerView-Movie/app/src/main/res/menu/toolbar_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/AndroidStudioProjects/RecyclerViewMovie/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/WindoWss/AndroidStudioProjects/RecyclerViewMovie/app/src/main/res/layout/card_film_tasarim.xml" value="0.5" />
       </map>
