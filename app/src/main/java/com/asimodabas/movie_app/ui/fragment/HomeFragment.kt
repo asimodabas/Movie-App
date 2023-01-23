@@ -8,7 +8,9 @@ import com.asimodabas.movie_app.R
 import com.asimodabas.movie_app.databinding.FragmentHomeBinding
 import com.asimodabas.movie_app.util.viewBinding
 import com.asimodabas.movie_app.viewmodel.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val binding by viewBinding(FragmentHomeBinding::bind)
