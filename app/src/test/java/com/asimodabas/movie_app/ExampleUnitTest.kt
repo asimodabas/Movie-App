@@ -1,4 +1,4 @@
-package com.asimodabas.recyclerview_movie
+package com.asimodabas.movie_app
 
 import org.junit.Test
 
