@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import com.asimodabas.movie_app.R
 import com.asimodabas.movie_app.databinding.FragmentSearchBinding
 import com.asimodabas.movie_app.util.viewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private val binding by viewBinding(FragmentSearchBinding::bind)

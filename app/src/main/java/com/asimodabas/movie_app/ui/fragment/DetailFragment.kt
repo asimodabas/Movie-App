@@ -8,7 +8,9 @@ import com.asimodabas.movie_app.R
 import com.asimodabas.movie_app.databinding.FragmentDetailBinding
 import com.asimodabas.movie_app.util.viewBinding
 import com.asimodabas.movie_app.viewmodel.DetailViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     private val binding by viewBinding(FragmentDetailBinding::bind)
