@@ -2,4 +2,16 @@
     <string name="app_name">Movie-App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Detail Fragment -->
+    <string name="detail_average">Average</string>
+    <string name="detail_vote">Vote</string>
+    <string name="detail_date">Date</string>
+    <string name="detail_title">Title</string>
+    <string name="detail_comment">Comment</string>
+    <!-- Home Fragment -->
+    <string name="home_highly_voted">Highly Voted</string>
+    <string name="home_popular">Popular</string>
+    <string name="home_movies_in_theaters">Movies in Theaters</string>
+    <!-- Search Fragment -->
+    <string name="search_enter_film_name">Please enter the name of the movie you want to search</string>
 </resources>
