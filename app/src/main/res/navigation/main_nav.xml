@@ -33,6 +33,13 @@
             app:exitAnim="@anim/close_component_from_left"
             app:popEnterAnim="@anim/open_component_from_left"
             app:popExitAnim="@anim/close_component_from_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/open_component_from_right"
+            app:exitAnim="@anim/close_component_from_left"
+            app:popEnterAnim="@anim/open_component_from_left"
+            app:popExitAnim="@anim/close_component_from_right" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -67,6 +74,12 @@
             app:exitAnim="@anim/close_component_from_left"
             app:popEnterAnim="@anim/open_component_from_left"
             app:popExitAnim="@anim/close_component_from_right" />
+        <argument
+            android:name="movieUid"
+            app:argType="integer" />
+        <argument
+            android:name="movieCategory"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
