@@ -25,11 +25,9 @@ class PopularAdapter(private val popularList: ArrayList<Popular>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.binding.rowTitle.text = popularList[position].title
         holder.binding.rowAverage.text = popularList[position].vote_average.toString()
-
         holder.binding.ivMovieImage.downloadFromUrl(
             popularList[position].poster_path, placeHolderProgressBar(holder.itemView.context)
         )
-
         holder.binding.movieLayout.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
                 popularList[position].id, MovieCategory.Populer.ordinal

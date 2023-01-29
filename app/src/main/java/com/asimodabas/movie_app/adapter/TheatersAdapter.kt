@@ -24,15 +24,13 @@ class TheatersAdapter(private val nowList: ArrayList<Now>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.binding.rowTitle.text = nowList[position].title
-        holder.binding.rowAverage.text = nowList[position].vote_average.toString()
-        holder.binding.rowDate.text = nowList[position].release_date
-
-        holder.binding.rowImage.downloadFromUrl(
+        holder.binding.rowTheatersTitle.text = nowList[position].title
+        holder.binding.rowTheatersAverage.text = nowList[position].vote_average.toString()
+        holder.binding.rowTheatersDate.text = nowList[position].release_date
+        holder.binding.rowTheatersImage.downloadFromUrl(
             nowList[position].poster_path, placeHolderProgressBar(holder.itemView.context)
         )
-
-        holder.binding.linearNow.setOnClickListener {
+        holder.binding.linearTheaters.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
                 nowList[position].id, MovieCategory.Now.ordinal
             )

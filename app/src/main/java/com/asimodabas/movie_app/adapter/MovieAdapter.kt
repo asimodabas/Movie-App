@@ -25,11 +25,9 @@ class MovieAdapter(private val movieList: ArrayList<Movie>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.binding.rowTitle.text = movieList[position].title
         holder.binding.rowAverage.text = movieList[position].vote_average.toString()
-
         holder.binding.ivMovieImage.downloadFromUrl(
             movieList[position].poster_path, placeHolderProgressBar(holder.itemView.context)
         )
-
         holder.binding.movieLayout.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
                 movieList[position].id, MovieCategory.Movie.ordinal

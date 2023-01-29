@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/linearNow"
+    android:id="@+id/linearTheaters"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -14,7 +16,7 @@
         app:cardElevation="1dp">
 
         <ImageView
-            android:id="@+id/rowImage"
+            android:id="@+id/rowTheatersImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </androidx.cardview.widget.CardView>
@@ -22,17 +24,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/rowTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/detail_title"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,12 +34,12 @@
             android:paddingTop="5dp">
 
             <ImageView
-                android:layout_width="25dp"
+                android:layout_width="50dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_star" />
+                android:src="@drawable/ic_imdb" />
 
             <TextView
-                android:id="@+id/rowAverage"
+                android:id="@+id/rowTheatersAverage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -55,19 +48,25 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="25dp"
-            android:paddingTop="5dp"
-            android:src="@drawable/ic_imdb" />
-
         <TextView
-            android:id="@+id/rowDate"
+            android:id="@+id/rowTheatersTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/detail_title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rowTheatersDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:paddingTop="5dp"
             android:text="@string/detail_date"
             android:textColor="@color/black"
             android:textSize="14sp" />
+
     </LinearLayout>
 </LinearLayout>
