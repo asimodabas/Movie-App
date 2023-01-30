@@ -24,6 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var movieAdapter: MovieAdapter
     private lateinit var popularAdapter: PopularAdapter
     private lateinit var theatersAdapter: TheatersAdapter
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
