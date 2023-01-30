@@ -38,14 +38,14 @@ interface MovieDeo {
     suspend fun deletePopulars()
 
     @Query("SELECT * FROM now")
-    suspend fun getAllNow(): List<Now>
+    suspend fun getAllTheaters(): List<Now>
 
     @Query("SELECT * FROM now WHERE id=:id")
-    suspend fun getNowId(id: Int): Now
+    suspend fun getTheatersId(id: Int): Now
 
     @Insert
-    suspend fun insertAllNow(now: Array<Now>): List<Long>
+    suspend fun insertAllTheaters(now: Array<Now>): List<Long>
 
     @Query("DELETE FROM now")
-    suspend fun deleteNows()
+    suspend fun deleteTheaters()
 }
