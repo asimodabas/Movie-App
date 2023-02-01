@@ -14,4 +14,5 @@
     <string name="home_movies_in_theaters">Movies in Theaters</string>
     <!-- Search Fragment -->
     <string name="search_enter_film_name">Please enter the name of the movie you want to search</string>
+    <string name="search_search">Search</string>
 </resources>
