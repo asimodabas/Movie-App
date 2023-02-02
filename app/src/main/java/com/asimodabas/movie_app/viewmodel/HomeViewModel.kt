@@ -1,7 +1,9 @@
 package com.asimodabas.movie_app.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.asLiveData
 import com.asimodabas.movie_app.model.*
 import com.asimodabas.movie_app.service.database.DaoRepository
 import com.asimodabas.movie_app.service.retrofit.ApiServiceRepository
@@ -166,8 +168,8 @@ class HomeViewModel @Inject constructor(
 
     private fun nowInSQLite(now: List<Now>) {
         launch {
-            dbRepository.deleteNow()
-            val listlong = dbRepository.insertAllNow(*now.toTypedArray())
+            dbRepository.deleteTheaters()
+            val listlong = dbRepository.insertAllTheaters(*now.toTypedArray())
             var i = 0
             while (i < now.size) {
                 now[i].id = listlong[i].toInt()
@@ -180,7 +182,7 @@ class HomeViewModel @Inject constructor(
 
     private fun getNowSQLite() {
         launch {
-            val now = dbRepository.getAllNow()
+            val now = dbRepository.getAllTheaters()
             showNow(now)
         }
     }
@@ -188,5 +190,10 @@ class HomeViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
+    }
+
+    fun searchDatabase(search: String): LiveData<List<Movie>> {
+        val searchDao = dbRepository.searchDatabaseMovie(search)
+        return searchDao.asLiveData()
     }
 }
