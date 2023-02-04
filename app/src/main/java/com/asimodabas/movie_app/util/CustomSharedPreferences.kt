@@ -9,7 +9,6 @@ class CustomSharedPreferences {
 
     companion object {
         private val PREFERENCES_TIME = "preferences_time"
-
         private var sharedPreferences: SharedPreferences? = null
 
         @Volatile

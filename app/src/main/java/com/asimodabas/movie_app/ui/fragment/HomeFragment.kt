@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asimodabas.movie_app.R
@@ -50,23 +49,23 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun observeLiveData() {
-        viewModel.moviedata.observe(viewLifecycleOwner, Observer { movies ->
+        viewModel.moviedata.observe(viewLifecycleOwner) { movies ->
             movies.let {
                 movieAdapter.updateMovieListe(movies)
             }
-        })
+        }
 
-        viewModel.popularData.observe(viewLifecycleOwner, Observer { popular ->
+        viewModel.popularData.observe(viewLifecycleOwner) { popular ->
             popular.let {
                 popularAdapter.updatePopularList(popular)
             }
-        })
+        }
 
-        viewModel.nowPlayingData.observe(viewLifecycleOwner, Observer { now ->
+        viewModel.nowPlayingData.observe(viewLifecycleOwner) { now ->
             now.let {
                 theatersAdapter.updateNowList(now)
             }
-        })
+        }
     }
 
     private fun getRecycler() {

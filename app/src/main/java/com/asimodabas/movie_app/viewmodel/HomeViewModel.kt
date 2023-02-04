@@ -4,7 +4,12 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
-import com.asimodabas.movie_app.model.*
+import com.asimodabas.movie_app.model.Movie
+import com.asimodabas.movie_app.model.MovieResponse
+import com.asimodabas.movie_app.model.Now
+import com.asimodabas.movie_app.model.NowResult
+import com.asimodabas.movie_app.model.Popular
+import com.asimodabas.movie_app.model.PopularResponse
 import com.asimodabas.movie_app.service.database.DaoRepository
 import com.asimodabas.movie_app.service.retrofit.ApiServiceRepository
 import com.asimodabas.movie_app.util.CustomSharedPreferences

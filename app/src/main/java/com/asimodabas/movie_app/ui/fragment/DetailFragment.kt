@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.asimodabas.movie_app.R
 import com.asimodabas.movie_app.databinding.FragmentDetailBinding
@@ -45,7 +44,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     }
 
     private fun observePopularData() {
-        viewModel.populars.observe(viewLifecycleOwner, Observer { popular ->
+        viewModel.populars.observe(viewLifecycleOwner) { popular ->
             popular.let {
                 binding.tvTitle.text = popular.title
                 binding.tvComment.text = popular.overview
@@ -61,11 +60,11 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                     .load("https://image.tmdb.org/t/p/w500" + popular.poster_path)
                     .into(binding.ivDetailImage)
             }
-        })
+        }
     }
 
     private fun observeTheatersData() {
-        viewModel.theaters.observe(viewLifecycleOwner, Observer { now ->
+        viewModel.theaters.observe(viewLifecycleOwner) { now ->
             now.let {
                 binding.tvTitle.text = now.title
                 binding.tvComment.text = now.overview
@@ -81,11 +80,11 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                     .load("https://image.tmdb.org/t/p/w500" + now.poster_path)
                     .into(binding.ivDetailImage)
             }
-        })
+        }
     }
 
     private fun observeMovieData() {
-        viewModel.movies.observe(viewLifecycleOwner, Observer { movie ->
+        viewModel.movies.observe(viewLifecycleOwner) { movie ->
             movie.let {
                 binding.tvTitle.text = movie.title
                 binding.tvComment.text = movie.overview
@@ -101,6 +100,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                     .load("https://image.tmdb.org/t/p/w500" + movie.poster_path)
                     .into(binding.ivDetailImage)
             }
-        })
+        }
     }
 }

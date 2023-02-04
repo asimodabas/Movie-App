@@ -6,7 +6,6 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asimodabas.movie_app.R
 import com.asimodabas.movie_app.adapter.SearchAdapter
@@ -53,18 +52,18 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private fun searchDatabase(deger: CharSequence) {
         val searchQuery = "%$deger%"
-        homeViewModel.searchDatabase(searchQuery).observe(viewLifecycleOwner, Observer { search ->
+        homeViewModel.searchDatabase(searchQuery).observe(viewLifecycleOwner) { search ->
             search.let {
                 searchAdapter.updateMovieListe(search)
             }
-        })
+        }
     }
 
     private fun observeLiveData() {
-        homeViewModel.moviedata.observe(viewLifecycleOwner, Observer { movie ->
+        homeViewModel.moviedata.observe(viewLifecycleOwner) { movie ->
             movie.let {
                 searchAdapter.updateMovieListe(movie)
             }
-        })
+        }
     }
 }
